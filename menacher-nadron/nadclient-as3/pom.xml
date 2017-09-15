@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<artifactId>menacher-nadron</artifactId>
+		<groupId>com.github.zzh</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.menacher</groupId>
+	<groupId>com.github.zzh</groupId>
 	<artifactId>nadclient-as3</artifactId>
-	<version>0.5-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>swc</packaging>
 	<name>nadclient-as3</name>
 	<url>https://github.com/menacher/java-game-server/tree/netty4/jetclient-as3</url>
@@ -11,12 +16,7 @@
 		Flash/Air/Flex clients can use this library to connect and interact
 		with nadron server.</description>
 
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
-	
+
 	<licenses>
 		<license>
 			<name>GNU Lesser General Public License (LGPL), Version 2.1</name>
@@ -46,9 +46,8 @@
 	
 	<build>
 		<sourceDirectory>src/main/flex</sourceDirectory>
-		<testSourceDirectory>src/test/flex</testSourceDirectory>
 		<plugins>
-
+			
 			<plugin>
 				<groupId>org.sonatype.flexmojos</groupId>
 				<artifactId>flexmojos-maven-plugin</artifactId>
@@ -58,8 +57,7 @@
 					<debug>true</debug>
 				</configuration>
 			</plugin>
-
-
+			
 
 		</plugins>
 	</build>
@@ -95,6 +93,12 @@
 		<pluginRepository>
 			<id>flex-mojos-plugin-repository</id>
 			<url>http://repository.sonatype.org/content/groups/flexgroup</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
 
